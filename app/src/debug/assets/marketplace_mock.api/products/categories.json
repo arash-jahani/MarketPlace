@@ -1,0 +1,24 @@
+{
+  "status": {
+    "code": 200,
+    "message": "درخواست تائید شد"
+  },
+  "data":  [
+      {
+        "id": 1,
+        "title": "تنقلات",
+        "icon": "https://api.snapp.market/media/cache/menu-category_image/uploads/images/vendors/users/app/5bbb3c7027ee8.jpg"
+      },
+      {
+        "id": 2,
+        "title": "نوشیدنی",
+        "icon": "https://api.snapp.market/media/cache/menu-category_image/uploads/images/vendors/users/app/5cc6efd672492.jpg"
+      },
+      {
+        "id": 3,
+        "title": "لبنیات",
+        "icon": "https://api.snapp.market/media/cache/menu-category_image/uploads/images/vendors/users/app/5bbb3beb1d757.jpg"
+      }
+    ]
+
+}

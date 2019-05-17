@@ -1,0 +1,49 @@
+{
+  "status": {
+    "code": 200,
+    "message": "درخواست تائید شد"
+  },
+  "data":  [
+      {
+        "id": 1,
+        "cat_id":"1",
+        "title": "اسنک کرانچی تند و آتشین ۸۰ گرمی چی‌توز",
+        "price":3000,
+        "discount":10,
+        "icon": "https://api.snapp.market/media/cache/product-variation_image2/uploads/images/vendors/users/app/5befbee25321f.jpg"
+      },
+      {
+        "id": 2,
+        "cat_id":"1",
+        "title": "اسنک طلایی ۶۰ گرمی چی‌توز",
+        "price":2000,
+        "discount":10,
+        "icon": "https://api.snapp.market/media/cache/product-variation_image2/uploads/images/vendors/users/app/222885.jpg"
+      },
+      {
+        "id": 3,
+        "cat_id":"1",
+        "title": "اسنک پنیری ۵۷ گرمی چاکلز",
+        "price":2000,
+        "discount":10,
+        "icon": "https://api.snapp.market/media/cache/product-variation_image_thumbnail/uploads/images/vendors/users/app/hph-163124.jpg"
+      },
+      {
+        "id": 4,
+        "cat_id":"1",
+        "title": "استیک کچاپ ویژه ۱۰۵ گرمی چی توز",
+        "price":3000,
+        "discount":10,
+        "icon": "https://api.snapp.market/media/cache/product-variation_image_thumbnail/uploads/images/vendors/users/app/hph-222891.jpg"
+      },
+      {
+        "id": 5,
+        "cat_id":"1",
+        "title": "چی‌پلت کچاپ ۴۷ گرمی چی‌توز",
+        "price":2500,
+        "discount":10,
+        "icon": "https://api.snapp.market/media/cache/product-variation_image_thumbnail/uploads/images/vendors/users/app/257930.jpg"
+      }
+    ]
+
+}
