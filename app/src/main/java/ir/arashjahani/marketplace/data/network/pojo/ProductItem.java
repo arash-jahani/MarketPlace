@@ -9,7 +9,7 @@ public class ProductItem {
     @SerializedName("cat_id")
     private String mCatId;
     @SerializedName("discount")
-    private Long mDiscount;
+    private Integer mDiscount;
     @SerializedName("icon")
     private String mIcon;
     @SerializedName("id")
@@ -27,11 +27,11 @@ public class ProductItem {
         mCatId = catId;
     }
 
-    public Long getDiscount() {
+    public Integer getDiscount() {
         return mDiscount;
     }
 
-    public void setDiscount(Long discount) {
+    public void setDiscount(Integer discount) {
         mDiscount = discount;
     }
 

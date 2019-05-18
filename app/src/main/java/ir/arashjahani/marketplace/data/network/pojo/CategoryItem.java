@@ -9,7 +9,7 @@ public class CategoryItem {
     @SerializedName("icon")
     private String mIcon;
     @SerializedName("id")
-    private Long mId;
+    private Integer mId;
     @SerializedName("title")
     private String mTitle;
 
@@ -21,11 +21,11 @@ public class CategoryItem {
         mIcon = icon;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return mId;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         mId = id;
     }
 

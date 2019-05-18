@@ -16,10 +16,10 @@ import retrofit2.http.Path;
 public interface MarketPlaceApiService {
 
     @GET("products/categories")
-    Maybe<WrapperResponse<List<CategoryItem>>> getCategoryList();
+    Call<WrapperResponse<List<CategoryItem>>> getCategoryList();
 
      @GET("products/{categoryId}")
-    Maybe<WrapperResponse<List<ProductItem>>> getProductList(@Path("categoryId") Integer categoryId);
+    Call<WrapperResponse<List<ProductItem>>> getProductList(@Path("categoryId") Integer categoryId);
 
 
 }

@@ -1,41 +1,39 @@
 package ir.arashjahani.marketplace.data;
 
-import android.content.Context;
-
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 import androidx.annotation.NonNull;
-import io.reactivex.Maybe;
+import androidx.lifecycle.MutableLiveData;
+import ir.arashjahani.marketplace.data.network.RestApiHelper;
 import ir.arashjahani.marketplace.data.network.RestApiManager;
 import ir.arashjahani.marketplace.data.network.pojo.CategoryItem;
 import ir.arashjahani.marketplace.data.network.pojo.ProductItem;
-import ir.arashjahani.marketplace.data.network.pojo.WrapperResponse;
 
 /**
  * Created By ArashJahani on 05
  */
+@Singleton
 public class DataRepository implements DataRepositoryHelper {
 
-    private Context context;
-    private RestApiManager restApiManager;
+    private RestApiHelper restApiHelper;
 
     @Inject
-    public DataRepository( Context context, RestApiManager restApiManager) {
-        this.context = context;
-        this.restApiManager = restApiManager;
+    DataRepository(RestApiHelper restApiHelper) {
+        this.restApiHelper = restApiHelper;
     }
 
 
     @Override
-    public Maybe<WrapperResponse<List<CategoryItem>>> loadCategoryList() {
-        return restApiManager.getCategoryList();
+    public MutableLiveData<List<CategoryItem>> loadCategoryList() {
+        return restApiHelper.getCategoryList();
     }
 
     @Override
-    public Maybe<WrapperResponse<List<ProductItem>>> loadProductList(@NonNull Integer categoryId) {
-        return restApiManager.getProductList(categoryId);
+    public MutableLiveData<List<ProductItem>> loadProductList(@NonNull Integer categoryId) {
+        return restApiHelper.getProductList(categoryId);
     }
 
     @Override
