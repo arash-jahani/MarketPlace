@@ -21,14 +21,14 @@ public class UserOrderListViewModel extends ViewModel {
     }
 
 
-    MutableLiveData<String> getOrderState(){
-
-        Observable<String> observable = Observable.just("آماده سازی", "ارسال شده", "تحویل موفق");
-        observable
-                .flatMap()
-                .flatMap()
-                .subscribe()
-
-    }
+//    MutableLiveData<String> getOrderState(){
+//
+//        Observable<String> observable = Observable.just("آماده سازی", "ارسال شده", "تحویل موفق");
+//        observable
+//                .flatMap()
+//                .flatMap()
+//                .subscribe()
+//
+//    }
 
 }
