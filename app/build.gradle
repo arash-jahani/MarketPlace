@@ -12,6 +12,13 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // defining the google map key
+        manifestPlaceholders = [
+                GOOGLE_MAP_KEY:googleMapAPiKey
+        ]
+
+
     }
     buildTypes {
         release {
@@ -72,9 +79,13 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     //annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
+    //map
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+
 }
 repositories {
     mavenCentral()
     google()
 
 }
+

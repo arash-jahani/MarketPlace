@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
@@ -19,14 +20,10 @@ import ir.arashjahani.marketplace.viewmodel.ProductListViewModel;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import javax.inject.Inject;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ProductListFragment extends Fragment implements Injectable, ProductItemCallback {
 
     @Inject
@@ -51,6 +48,7 @@ public class ProductListFragment extends Fragment implements Injectable, Product
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_product_list, container, false);
         ButterKnife.bind(this, view);
+
 
         return view;
     }
@@ -79,7 +77,18 @@ public class ProductListFragment extends Fragment implements Injectable, Product
     }
 
     @Override
-    public void onBuyProductClick(ProductItem productItem) {
+    public void onBuyProductClick(View view, ProductItem productItem) {
+
+//        Bundle bundle=new Bundle();
+//        Intent intent=new Intent(getActivity(), UserLocationActivity.class);
+//        intent.putExtras(bundle);
+//        startActivityForResult(intent,1);
+
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("productItem", productItem);
+
+        Navigation.findNavController(view).navigate(R.id.userLocationActivity,bundle);
+
 
     }
 }

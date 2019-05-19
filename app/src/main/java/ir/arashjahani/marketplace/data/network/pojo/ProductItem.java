@@ -3,8 +3,10 @@ package ir.arashjahani.marketplace.data.network.pojo;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 @SuppressWarnings("unused")
-public class ProductItem {
+public class ProductItem implements Serializable {
 
     @SerializedName("cat_id")
     private String mCatId;

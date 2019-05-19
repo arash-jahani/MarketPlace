@@ -18,10 +18,23 @@
         android:id="@+id/productListFragment"
         android:name="ir.arashjahani.marketplace.ui.main.product.ProductListFragment"
         android:label="fragment_product_list"
-        tools:layout="@layout/fragment_product_list" />
+        tools:layout="@layout/fragment_product_list" >
+        <action
+            android:id="@+id/action_productListFragment_to_userLocationActivity"
+            app:destination="@id/userLocationActivity" />
+    </fragment>
     <fragment
         android:id="@+id/orderListFragment"
-        android:name="ir.arashjahani.marketplace.ui.main.order.OrderListFragment"
+        android:name="ir.arashjahani.marketplace.ui.main.order.UserOrderListFragment"
         android:label="fragment_order_list"
         tools:layout="@layout/fragment_order_list" />
+    <fragment
+        android:id="@+id/userLocationActivity"
+        android:name="ir.arashjahani.marketplace.ui.main.map.UserLocationFragment"
+        android:label="activity_maps"
+        tools:layout="@layout/fragment_user_location" >
+        <action
+            android:id="@+id/action_userLocationActivity_to_orderListFragment"
+            app:destination="@id/orderListFragment" />
+    </fragment>
 </navigation>

@@ -55,7 +55,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                productItemCallback.onBuyProductClick(productItem);
+                productItemCallback.onBuyProductClick(view,productItem);
             }
         });
 
